@@ -1,5 +1,4 @@
 const express = require('express');
-const res = require('express/lib/response');
 const path = require('path');
 const api = require('./routes/index.js')
 
