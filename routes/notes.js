@@ -31,7 +31,7 @@ notes.get("/", (req, res) => {
  
   notes.delete("/:id", (req, res) => {
       const noteId = req.params.id;
-      readFromFile("/db/db.json")
+      readFromFile("./db/db.json")
       .then((data) = JSON.parse(data))
       .then((json) => {
           const result = json.filter((note) => note.id !== noteId);
