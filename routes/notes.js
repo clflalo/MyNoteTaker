@@ -7,6 +7,19 @@ notes.get("/", (req, res) => {
     .then((data) => res.json(JSON.parse(data)));
   });
 
+  
+  notes.get('/:id', (req, res) => {
+    const id = req.params.id;
+    readFromFile('./db/db.json')
+      .then((data) => JSON.parse(data))
+      .then((json) => {
+        const result = json.filter((note) => note.id === id);
+        return result.length > 0
+          ? res.json(result)
+          : res.json('No note with that ID');
+      });
+  });
+
 
   notes.post("/", (req,res) => {
     console.log(req.body);
