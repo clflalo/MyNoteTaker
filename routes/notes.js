@@ -27,16 +27,33 @@ notes.get("/", (req, res) => {
     }
 
   });
+
+
+
+  notes.get("/:id", (req, res) => {
+    const noteId = req.params.id;
+    readFromFile("./db/db.json")
+      .then((data) => JSON.parse(data))
+      .then((json) => {
+        const result = json.filter((note) => note.id === noteId);
+        return result.length > 0
+          ? res.json(result)
+          : res.json("No note with that ID");
+      });
+
+  });
+
+  //Attempt to Delete saved notes
   notes.delete("/:id", (req, res) => {
       const noteId = req.params.id;
-      readFromFile('./db/db.json')
+      readFromFile("/db/db.json")
       .then((data) = JSON.parse(data))
       .then((json) => {
           const result = json.filter((note) => note.id !== noteId);
           console.log(noteId);
-          console.log(result);
+          
 
-          writeTofile('./db/db.json', result);
+          writeTofile("'./db/db.json'", result);
 
           res.json(`${noteId} has been deleted`)
       });
