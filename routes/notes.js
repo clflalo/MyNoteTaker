@@ -27,23 +27,7 @@ notes.get("/", (req, res) => {
     }
 
   });
-
-
-
-  notes.get("/:id", (req, res) => {
-    const noteId = req.params.id;
-    readFromFile("./db/db.json")
-      .then((data) => JSON.parse(data))
-      .then((json) => {
-        const result = json.filter((note) => note.id === noteId);
-        return result.length > 0
-          ? res.json(result)
-          : res.json("No note with that ID");
-      });
-
-  });
-
-  //Attempt to Delete saved notes
+ 
   notes.delete("/:id", (req, res) => {
       const noteId = req.params.id;
       readFromFile("/db/db.json")
