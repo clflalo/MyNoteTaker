@@ -31,12 +31,13 @@ notes.get("/", (req, res) => {
       const noteId = req.params.id;
       readFromFile('./db/db.json')
       .then((data) = JSON.parse(data))
-      .then((jason) => {
-          const result = json.filter((note) => note.id !== noteID);
+      .then((json) => {
+          const result = json.filter((note) => note.id !== noteId);
           console.log(noteId);
           console.log(result);
 
           writeTofile('./db/db.json', result);
+
           res.json(`${noteId} has been deleted`)
       });
   });
