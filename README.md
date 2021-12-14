@@ -6,7 +6,7 @@
 
 ## Example
 
-! [NoteTakerEx](./Assets/AppExample.png)
+![NoteTakerEx](./Assets/AppExample.png)
 
 ## Links
 
@@ -16,3 +16,7 @@
 ## Credits
 
 - Jesus Cifuentes
+
+## Questions
+
+- For any questions feel free to reach me at [Github](https://github.com/clflalo)
