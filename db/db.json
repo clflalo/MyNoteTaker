@@ -1,6 +1,17 @@
 [
     {
-        "title":"Test Title",
-        "text":"Test text"
+        "id": "dd7783e5-5e4a-46b1-9931-9248c02358a9",
+        "title": "Take out the trash",
+        "text": "remember it's trash day\n"
+    },
+    {
+        "id": "f790b3bb-f16f-4e85-94a3-164aad6fdaa1",
+        "title": "Express.js",
+        "text": "very confusing\n"
+    },
+    {
+        "id": "110edb31-983e-4bff-bee0-9a5e43197ae6",
+        "title": "JavaScript",
+        "text": "simple yet difficult"
     }
 ]
