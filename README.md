@@ -3,7 +3,7 @@
 ## Description
 
 - This application is designed to take notes inputed from a user and to pin them onto the site.
-- Application uses Express.js back in order to recieve and store the data inputed in into a JSON file
+- Application uses Express.js back end in order to recieve and store the data inputed in into a JSON file
 
 ## Example
 
